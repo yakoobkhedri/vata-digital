@@ -3,6 +3,7 @@
 var projects = new Swiper(".projects", {
   effect: "coverflow",
   loop:true,
+  autoplay: true,
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: 1,
