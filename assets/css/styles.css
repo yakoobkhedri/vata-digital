@@ -69,7 +69,9 @@ a:hover {
 .bg-main2 {
     background-color: #D5F5F6;
 }
-
+.bg-main3{
+    background-color: #EDFAFA;
+}
 .bg-second {
     background-color: #F9A537;
 }
@@ -290,6 +292,49 @@ a {
 
 .text-justify {
     text-align: justify;
+}
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    bottom: 15px;
+}
+
+.swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    background: white;
+}
+
+.swiper-pagination-bullet {
+    background: #D1D5DB;
+    opacity: 100%;
+}
+.swiper-pagination-bullet-active {
+    width: 20px;
+    border-radius: 13px;
+    background: #00bed8;
+  }
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+    background: white;
+    width: 20px;
+    height: 8px;
+    border-radius: 5px;
+}
+.swiper-button-prev::after,.swiper-button-next::after {
+    font-size: 16px;
+    color: #9CA3AF;
+    transition: all .4s;
+}
+.swiper-button-prev,.swiper-button-next {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid #9CA3AF;
+    transition: all .4s;
+  }
+  .swiper-button-prev:hover,.swiper-button-next:hover{
+    background-color: #00bed8;
+    border: 2px solid #00bed8;
+  }
+  .swiper-button-prev:hover::after,.swiper-button-next:hover:after {
+    color: white;
 }
 
 /* header */
