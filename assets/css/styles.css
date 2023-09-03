@@ -1,0 +1,316 @@
+@font-face {
+    font-family: "IRANSans-Regular";
+    src: url('../fonts/IRANSansXFaNum-Regular.woff') format("woff");
+}
+
+@font-face {
+    font-family: "IRANSans-Bold";
+    src: url('../fonts/IRANSansXFaNum-Bold.woff') format("woff");
+}
+
+body {
+    font-family: "IRANSans-Regular";
+    user-select: none;
+}
+
+.font-bold {
+    font-family: "IRANSans-Bold";
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+a:hover {
+    color: #12B2B2;
+}
+
+.nav-link:focus {
+    color: #E5E7EB;
+}
+
+.main-outline-hover:hover {
+    background-color: transparent;
+    color: #12B2B2 !important;
+}
+
+.main-gradient-bg {
+    background: linear-gradient(268.27deg, #12B2B2 3.31%, #01C5D5 99.99%);
+}
+
+.white-gradient-bg {
+    background: linear-gradient(267.76deg, rgba(255, 255, 255, 0.64) 0.26%, rgba(255, 255, 255, 0.4) 101.9%);
+}
+
+.border-main {
+    border: 1px solid #12B2B2;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.bg-gray {
+    background-color: #6B7280;
+}
+
+.bg-gray2 {
+    background-color: #E5E7EB;
+}
+
+.bg-gray3 {
+    background-color: #F3F4F6;
+}
+
+.bg-main {
+    background-color: #12B2B2;
+}
+
+.bg-main2 {
+    background-color: #D5F5F6;
+}
+
+.bg-second {
+    background-color: #F9A537;
+}
+
+.bg-second2 {
+    background-color: #FEF2E1;
+}
+
+.bg-third {
+    background-color: #FF6633;
+}
+
+.bg-third2 {
+    background-color: #FFE8E0;
+}
+
+.bg-purple {
+    background-color: #6875F5;
+}
+
+.bg-purple2 {
+    background-color: #E5EDFF;
+}
+
+.text-gray {
+    color: #6B7280;
+}
+
+.text-gray2 {
+    color: #6c757d;
+    ;
+}
+
+.text-gray3 {
+    color: #374151;
+}
+
+.text-gray4 {
+    color: #1F2A37;
+}
+
+.text-gray5 {
+    color: #4B5563;
+}
+
+.text-main {
+    color: #12B2B2;
+}
+
+.text-second {
+    color: #F9A537;
+}
+
+.text-third {
+    color: #FF6633;
+}
+
+.text-purple {
+    color: #6875F5;
+}
+
+.special-radius {
+    border-radius: 999px 999px 0px 920px;
+}
+
+.rotate-45 {
+    transform: rotate(45deg);
+}
+
+.outline-none {
+    outline: none;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .4s;
+}
+
+.fs-10 {
+    font-size: 10px;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.h-100vh {
+    height: 100vh;
+}
+
+.w-48 {
+    width: 48px;
+}
+
+.h-48 {
+    height: 48px;
+}
+
+.w-30 {
+    width: 30px;
+}
+
+.w-37 {
+    width: 37px;
+}
+.w-72{
+    width: 72px;
+}
+.h-72{
+    height: 72px;
+}
+.w-171 {
+    width: 171px;
+}
+
+.w-184 {
+    width: 184px;
+}
+
+.w-390 {
+    width: 390px;
+}
+
+.w-459 {
+    width: 459px;
+}
+
+.h-566 {
+    height: 566px;
+}
+
+.max-w-100 {
+    max-width: 100%;
+}
+
+.divider {
+    width: 1.5px;
+    height: 38px;
+    background-color: white;
+}
+
+.transition {
+    transition: all .4s;
+}
+
+.rounded-18 {
+    border-radius: 18px;
+}
+
+.rounded-12 {
+    border-radius: 12px;
+}
+
+.opacity-none {
+    opacity: 0;
+}
+
+.focus-none {
+    box-shadow: none !important;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    float: right;
+    padding-left: 0.5rem;
+}
+
+.alert-dismissible .btn-close {
+    left: 0;
+    right: auto;
+}
+
+.bottom-31 {
+    bottom: -31px;
+}
+
+.top-99 {
+    top: -100px;
+}
+
+.right-51 {
+    right: -51px;
+}
+
+.accordion-button::after {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #F3F4F6;
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: contrast(0%);
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+}
+
+.nav-tabs .nav-link {
+    z-index: 22;
+}
+
+.mt-15 {
+    margin-top: -15px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* header */
+header li a {
+    color: #6c757d;
+}
+
+header li a.active,
+header li a:hover {
+    color: #12B2B2 !important;
+}
+
+/* responsive */
+@media only screen and (max-width:1400px) {}
+
+@media only screen and (max-width:1200px) {}
+
+@media only screen and (max-width:992px) {}
+
+@media only screen and (max-width:768px) {}
+
+@media only screen and (max-width:576px) {}
+
+@media only screen and (max-width:400px) {}
