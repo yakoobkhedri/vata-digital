@@ -123,7 +123,9 @@ a:hover {
 .text-gray5 {
     color: #4B5563;
 }
-
+.text-gray6 {
+    color: #1F2937;
+}
 .text-main {
     color: #12B2B2;
 }
@@ -196,6 +198,9 @@ a {
 
 .h-72 {
     height: 72px;
+}
+.h-90{
+    height: 90px;
 }
 .h-130{
     height: 130px;
@@ -372,6 +377,11 @@ header li a.active,
 header li a:hover {
     color: #12B2B2 !important;
 }
+/* footer */
+footer .arrow-link {
+    transform: rotate(180deg);
+    top: -41px;
+  }
 
 /* responsive */
 @media only screen and (max-width:1400px) {}
