@@ -27,7 +27,7 @@ var projects = new Swiper(".projects", {
     el: ".swiper-pagination",
   },
 });
-var menuSwiper = new Swiper(".brands", {
+var brands = new Swiper(".brands", {
   loop: true,
   autoplay: true,
   slidesPerView: 2,
