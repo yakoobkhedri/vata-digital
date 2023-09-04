@@ -45,8 +45,21 @@ var brands = new Swiper(".brands", {
   },
   pagination: {
     el: ".swiper-pagination",
-    dynamicBullets: true,
   },
+});
+var testimonials = new Swiper(".testimonials", {
+  loop: true,
+  autoplay: true,
+  slidesPerView: 1,
+  spaceBetween: 40,
+  breakpoints: {
+    1200: {
+      slidesPerView: 3
+    },
+    576: {
+      slidesPerView: 2
+    },
+  }
 });
 // fancybox
 

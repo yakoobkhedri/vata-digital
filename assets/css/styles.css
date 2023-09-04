@@ -42,6 +42,11 @@ a:hover {
     background: linear-gradient(267.76deg, rgba(255, 255, 255, 0.64) 0.26%, rgba(255, 255, 255, 0.4) 101.9%);
 }
 
+.white-gradient-bg2 {
+    background: linear-gradient(96.9deg, rgba(255, 255, 255, 0.8) 12.96%, rgba(255, 255, 255, 0.1) 55.39%),
+        linear-gradient(267.76deg, rgba(255, 255, 255, 0.8) 0.26%, rgba(255, 255, 255, 0.5) 101.9%);
+}
+
 .border-main {
     border: 1px solid #12B2B2;
 }
@@ -69,9 +74,11 @@ a:hover {
 .bg-main2 {
     background-color: #D5F5F6;
 }
-.bg-main3{
+
+.bg-main3 {
     background-color: #EDFAFA;
 }
+
 .bg-second {
     background-color: #F9A537;
 }
@@ -182,11 +189,19 @@ a {
 .w-37 {
     width: 37px;
 }
-.w-72{
+
+.w-72 {
     width: 72px;
 }
-.h-72{
+
+.h-72 {
     height: 72px;
+}
+.h-130{
+    height: 130px;
+}
+.h-193 {
+    height: 193px;
 }
 .w-171 {
     width: 171px;
@@ -293,6 +308,7 @@ a {
 .text-justify {
     text-align: justify;
 }
+
 .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
     bottom: 15px;
@@ -306,34 +322,44 @@ a {
     background: #D1D5DB;
     opacity: 100%;
 }
+
 .swiper-pagination-bullet-active {
     width: 20px;
     border-radius: 13px;
     background: #00bed8;
-  }
+}
+
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
     background: white;
     width: 20px;
     height: 8px;
     border-radius: 5px;
 }
-.swiper-button-prev::after,.swiper-button-next::after {
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
     font-size: 16px;
     color: #9CA3AF;
     transition: all .4s;
 }
-.swiper-button-prev,.swiper-button-next {
+
+.swiper-button-prev,
+.swiper-button-next {
     width: 38px;
     height: 38px;
     border-radius: 50%;
     border: 2px solid #9CA3AF;
     transition: all .4s;
-  }
-  .swiper-button-prev:hover,.swiper-button-next:hover{
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
     background-color: #00bed8;
     border: 2px solid #00bed8;
-  }
-  .swiper-button-prev:hover::after,.swiper-button-next:hover:after {
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover:after {
     color: white;
 }
 
