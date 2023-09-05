@@ -464,7 +464,14 @@ header li a.active,
 header li a:hover {
     color: #12B2B2 !important;
 }
-
+/* benefits */
+.benefit-card:hover{
+  background: linear-gradient(86.08deg, #13B3B3 -2.85%, #02C5D4 101.62%);
+  color: white;
+}
+.benefit-card:hover img.position-absolute{
+  z-index: 10;
+}
 /* footer */
 footer .arrow-link {
     transform: rotate(180deg);
