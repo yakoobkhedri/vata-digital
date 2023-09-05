@@ -222,6 +222,12 @@ a {
 .w-322 {
     width: 322px;
 }
+.w-333 {
+    width: 333px;
+}
+.h-333 {
+    height: 333px;
+}
 .w-422 {
     width: 422px;
 }
@@ -281,7 +287,9 @@ a {
 .top-99 {
     top: -100px;
 }
-
+.top-105 {
+    top: -105px;
+}
 .right-51 {
     right: -51px;
 }
