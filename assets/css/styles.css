@@ -56,6 +56,9 @@ a:hover {
 .z-10 {
     z-index: 10;
 }
+.z-100 {
+    z-index: 100;
+}
 .ps-100{
     padding-left: 100px;
 }
@@ -381,7 +384,43 @@ a {
 .swiper-button-next:hover:after {
     color: white;
 }
-
+img[alt="shape1"] {
+    animation: bounce 2525ms infinite ease-out;
+  }
+  img[alt="shape2"] {
+    animation: bounce2 2725ms infinite ease-out;
+  }
+  img[alt="shape3"] {
+    animation: bounce 3000ms infinite ease-out;
+  }
+  @keyframes bounce {
+    0% {
+        transform: translate(0px, 0px);
+      }
+    50% {
+      transform: translate(0px, 23px);
+    }
+    75% {
+        transform: translate(0px, -23px);
+      }
+      100% {
+        transform: translate(0px, 0px);
+      }
+  }
+  @keyframes bounce2 {
+    0% {
+        transform: translate(0px, 0px);
+      }
+    50% {
+      transform: translate(23px, 0px);
+    }
+    75% {
+        transform: translate(-23px, 0px);
+      }
+      100% {
+        transform: translate(0px, 0px);
+      }
+  }
 /* header */
 header{
     position: sticky;
