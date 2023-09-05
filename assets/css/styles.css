@@ -472,6 +472,13 @@ header li a:hover {
 .benefit-card:hover img.position-absolute{
   z-index: 10;
 }
+.benefit-card svg path,.benefit-card svg{
+   transition: all .4s;
+  }
+.benefit-card:hover svg path,.benefit-card:hover svg{
+    fill: white;
+    z-index: 20;
+  }
 /* footer */
 footer .arrow-link {
     transform: rotate(180deg);
@@ -497,7 +504,12 @@ footer .arrow-link {
     }
 }
 
-@media only screen and (max-width:768px) {}
+@media only screen and (max-width:768px) {
+    
+    .h-130,.h-193{
+        height: auto;
+    }
+}
 
 @media only screen and (max-width:576px) {
 
