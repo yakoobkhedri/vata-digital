@@ -1,4 +1,9 @@
+// mobile menu
+let hamIcon=document.getElementById('hamIcon');
 
+hamIcon.addEventListener('click',function () {
+  hamIcon.parentElement.parentElement.querySelector('ul').classList.add('active');
+})
 // swiper
 var projects = new Swiper(".projects", {
   effect: "coverflow",

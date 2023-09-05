@@ -16,15 +16,21 @@
   <!-- header -->
   <header class="mt-2 z-100">
     <nav class="container white-gradient-bg2 d-flex align-items-center justify-content-between p-3 border rounded-pill">
-      <!-- logo && search icon -->
+      <!-- logo && search icon && hamIcon -->
+      <svg id="hamIcon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-list-nested flex-shrink-0 text-main d-lg-none cursor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
+      </svg>
       <div class="d-flex align-items-center gap-5">
-        <a><img src="assets/img/logo.png" class="img-fluid"></a>
-        <div class="d-flex align-items-center justify-content-center w-48 h-48 rounded-circle bg-gray2 cursor">
+        <a class="flex-shrink-0"><img src="assets/img/logo.png" class="img-fluid"></a>
+        <div class="d-lg-flex d-none align-items-center justify-content-center w-48 h-48 rounded-circle bg-gray2 cursor">
           <img alt="search-icon" src="assets/img/search-icon.svg">
         </div>
       </div>
       <!-- menu -->
-      <ul class="list-unstyled m-0 p-0 d-flex align-items-center gap-4">
+      <ul class="list-unstyled m-0 p-lg-0 p-4 d-flex flex-column flex-lg-row align-items-center gap-4">
+        <form class="d-lg-none">
+          <input type="search" placeholder="جستجو" class="form-control">
+        </form>
         <li><a class="active text-gray2">صفحه اصلی</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle p-0 text-gray2" href="#" role="button" data-bs-toggle="dropdown"
@@ -39,10 +45,16 @@
         <li><a class="text-gray2">مجله خبری</a></li>
         <li><a class="text-gray2">درباره ما</a></li>
         <li><a class="text-gray2">تماس با ما</a></li>
+        <li>
+          <a class="d-lg-none d-flex align-items-center gap-1 cursor text-gray3">
+            <img alt="call-icon" src="assets/img/call-calling.svg">
+            <p class="mb-0">0913 192 0545</p>
+          </a>
+        </li>
       </ul>
       <!-- contact && login -->
       <div class="d-flex align-items-center gap-3">
-        <a class="d-flex align-items-center gap-1 cursor text-gray3">
+        <a class="d-lg-flex d-none align-items-center gap-1 cursor text-gray3">
           <img alt="call-icon" src="assets/img/call-calling.svg">
           <p class="mb-0">0913 192 0545</p>
         </a>
@@ -53,7 +65,7 @@
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
           </svg>
-          <p class="mb-0">ثبت نام / ورود</p>
+          <p class="mb-0 d-none d-xl-block">ثبت نام / ورود</p>
         </a>
       </div>
     </nav>
@@ -155,7 +167,7 @@
     </section>
 
     <!-- about -->
-    <section id="about" class="py-5 my-5">
+    <section id="about" class="py-5 my-5 overflow-hidden">
       <div class="container">
         <div class="row g-4 align-items-end pt-5">
           <div class="col-lg-6">
@@ -281,7 +293,7 @@
     </section>
 
     <!-- benefits -->
-    <section id="benefits" class="py-5 position-relative">
+    <section id="benefits" class="py-5 position-relative overflow-hidden">
       <img alt="shape" src="assets/img/wave3.svg" class="position-absolute end-0 start-0 mx-auto z-1">
       <div class="container">
         <div class="row g-4 align-items-center">
@@ -640,7 +652,7 @@
     </section>
 
     <!-- blog -->
-    <section id="blog" class="py-5 position-relative">
+    <section id="blog" class="py-5 position-relative overflow-hidden">
       <img alt="shape" src="assets/img/blur-circle.svg" class="position-absolute end-0 z-1">
       <div class="container">
         <div class="row g-4 align-items-center">

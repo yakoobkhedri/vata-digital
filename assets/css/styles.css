@@ -438,18 +438,23 @@ img[alt="shape3"] {
     }
 
     50% {
-        transform: translate(23px, 0px);
+        transform: translate(16px, 0px);
     }
 
     75% {
-        transform: translate(-23px, 0px);
+        transform: translate(-16px, 0px);
     }
 
     100% {
         transform: translate(0px, 0px);
     }
 }
-
+.overflow-x-hidden{
+    overflow-x: hidden;
+}
+.overflow-y-hidden{
+    overflow-y: hidden;
+}
 /* header */
 header {
     position: sticky;
@@ -464,21 +469,28 @@ header li a.active,
 header li a:hover {
     color: #12B2B2 !important;
 }
+
 /* benefits */
-.benefit-card:hover{
-  background: linear-gradient(86.08deg, #13B3B3 -2.85%, #02C5D4 101.62%);
-  color: white;
+.benefit-card:hover {
+    background: linear-gradient(86.08deg, #13B3B3 -2.85%, #02C5D4 101.62%);
+    color: white;
 }
-.benefit-card:hover img.position-absolute{
-  z-index: 10;
+
+.benefit-card:hover img.position-absolute {
+    z-index: 10;
 }
-.benefit-card svg path,.benefit-card svg{
-   transition: all .4s;
-  }
-.benefit-card:hover svg path,.benefit-card:hover svg{
+
+.benefit-card svg path,
+.benefit-card svg {
+    transition: all .4s;
+}
+
+.benefit-card:hover svg path,
+.benefit-card:hover svg {
     fill: white;
     z-index: 20;
-  }
+}
+
 /* footer */
 footer .arrow-link {
     transform: rotate(180deg);
@@ -488,9 +500,26 @@ footer .arrow-link {
 /* responsive */
 @media only screen and (max-width:1400px) {}
 
-@media only screen and (max-width:1200px) {}
+@media only screen and (max-width:1200px) {
+    
+    .h-48 {
+        height: 52px;
+      }
+}
 
 @media only screen and (max-width:992px) {
+    header ul {
+        position: fixed;
+        right: -444px;
+        top: 0;
+        bottom: 0;
+        background: #d5f5f6;
+        width: 280px;
+        transition: all .4s;
+    }
+    header ul.active {
+        right: 0;
+    }
     #banner div.position-absolute {
         position: static !important;
     }
@@ -505,8 +534,9 @@ footer .arrow-link {
 }
 
 @media only screen and (max-width:768px) {
-    
-    .h-130,.h-193{
+
+    .h-130,
+    .h-193 {
         height: auto;
     }
 }
