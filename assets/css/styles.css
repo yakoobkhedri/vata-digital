@@ -265,7 +265,9 @@ a {
 .h-566 {
     height: 566px;
 }
-
+.w-714 {
+    width: 714px;
+}
 .max-w-100 {
     max-width: 100%;
 }
@@ -321,7 +323,12 @@ a {
 .right-51 {
     right: -51px;
 }
-
+.left-107{
+    left: 107px;
+}
+.bottom-41{
+    bottom: -41px;
+}
 .accordion-button::after {
     margin-right: auto;
     margin-left: 0;
