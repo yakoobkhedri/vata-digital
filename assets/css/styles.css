@@ -159,7 +159,9 @@ a:hover {
 .special-radius {
     border-radius: 999px 999px 0px 920px;
 }
-
+.special-radius2{
+    border-radius: 8075px;
+}
 .rotate-45 {
     transform: rotate(45deg);
 }
@@ -257,7 +259,9 @@ a {
 .w-459 {
     width: 459px;
 }
-
+.w-460 {
+    width: 460px;
+}
 .h-566 {
     height: 566px;
 }
@@ -583,7 +587,7 @@ footer .arrow-link:hover svg {
 
 @media only screen and (max-width:576px) {
 
-    .w-422 {
+    .w-422,.w-460 {
         width: 300px;
     }
 }
