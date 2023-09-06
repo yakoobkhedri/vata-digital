@@ -213,7 +213,9 @@ a {
 .h-72 {
     height: 72px;
 }
-
+.h-80 {
+    height: 80px;
+}
 .h-90 {
     height: 90px;
 }
@@ -229,7 +231,9 @@ a {
 .w-171 {
     width: 171px;
 }
-
+.w-175 {
+    width: 175px;
+}
 .w-184 {
     width: 184px;
 }
@@ -326,7 +330,9 @@ a {
 .accordion-button:not(.collapsed)::after {
     filter: contrast(0%);
 }
-
+.accordion-button:focus{
+    box-shadow: none;
+}
 .nav-tabs {
     border-bottom: none;
 }
@@ -403,17 +409,19 @@ a {
 }
 
 img[alt="shape1"] {
-    animation: bounce 2525ms infinite ease-out;
+    animation: bounce 2525ms infinite ease-in;
 }
 
 img[alt="shape2"] {
-    animation: bounce2 2725ms infinite ease-out;
+    animation: bounce2 2725ms infinite ease-in;
 }
 
 img[alt="shape3"] {
-    animation: bounce 3000ms infinite ease-out;
+    animation: bounce 3000ms infinite ease-in;
 }
-
+img[src="assets/img/bubble.svg"]{
+    animation: rotate 3000ms infinite ease-in;
+}
 @keyframes bounce {
     0% {
         transform: translate(0px, 0px);
@@ -449,12 +457,31 @@ img[alt="shape3"] {
         transform: translate(0px, 0px);
     }
 }
-.overflow-x-hidden{
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+.overflow-x-hidden {
     overflow-x: hidden;
 }
-.overflow-y-hidden{
+
+.overflow-y-hidden {
     overflow-y: hidden;
 }
+
 /* header */
 header {
     position: sticky;
@@ -466,7 +493,7 @@ header li a {
 }
 
 header li a.active,
-header li a:hover {
+header li a:hover,footer ul li a:hover {
     color: #12B2B2 !important;
 }
 
@@ -491,20 +518,31 @@ header li a:hover {
     z-index: 20;
 }
 
+/* brands */
+.brands img {
+    filter: grayscale(100%);
+}
+.brands .swiper-slide:hover img {
+    filter: grayscale(0%);
+}
+
 /* footer */
 footer .arrow-link {
     transform: rotate(180deg);
     top: -41px;
+}
+footer .arrow-link:hover svg {
+   color: #12B2B2;
 }
 
 /* responsive */
 @media only screen and (max-width:1400px) {}
 
 @media only screen and (max-width:1200px) {
-    
+
     .h-48 {
         height: 52px;
-      }
+    }
 }
 
 @media only screen and (max-width:992px) {
@@ -517,9 +555,11 @@ footer .arrow-link {
         width: 280px;
         transition: all .4s;
     }
+
     header ul.active {
         right: 0;
     }
+
     #banner div.position-absolute {
         position: static !important;
     }
@@ -548,4 +588,8 @@ footer .arrow-link {
     }
 }
 
-@media only screen and (max-width:400px) {}
+@media only screen and (max-width:400px) {
+    #banner div.position-absolute h4 {
+        font-size: 16px !important;
+      }
+}

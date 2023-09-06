@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -13,21 +14,47 @@
 
 <body>
 
+
+  <!-- search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <input type="search" placeholder="جستجو" class="form-control">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- header -->
   <header class="mt-2 z-100">
     <nav class="container white-gradient-bg2 d-flex align-items-center justify-content-between p-3 border rounded-pill">
       <!-- logo && search icon && hamIcon -->
-      <svg id="hamIcon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-list-nested flex-shrink-0 text-main d-lg-none cursor" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
+      <svg id="hamIcon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
+        class="bi bi-list-nested flex-shrink-0 text-main d-lg-none cursor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
       </svg>
       <div class="d-flex align-items-center gap-5">
         <a class="flex-shrink-0"><img src="assets/img/logo.png" class="img-fluid"></a>
-        <div class="d-lg-flex d-none align-items-center justify-content-center w-48 h-48 rounded-circle bg-gray2 cursor">
+        <div data-bs-toggle="modal" data-bs-target="#searchModal"
+          class="d-lg-flex d-none align-items-center justify-content-center w-48 h-48 rounded-circle bg-gray2 cursor">
           <img alt="search-icon" src="assets/img/search-icon.svg">
         </div>
       </div>
       <!-- menu -->
       <ul class="list-unstyled m-0 p-lg-0 p-4 d-flex flex-column flex-lg-row align-items-center gap-4">
+        <svg id="closeMenu" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+          class="bi bi-x-circle-fill d-lg-none text-danger me-auto cursor" viewBox="0 0 16 16">
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+        </svg>
         <form class="d-lg-none">
           <input type="search" placeholder="جستجو" class="form-control">
         </form>
@@ -38,8 +65,8 @@
             خدمات
           </a>
           <ul class="dropdown-menu text-end">
-            <li><a class="dropdown-item" href="#">خدمات 1</a></li>
-            <li><a class="dropdown-item" href="#">خدمات 2</a></li>
+            <li><a class="dropdown-item" href="#">طراحی سایت</a></li>
+            <li><a class="dropdown-item" href="#">سئو سایت</a></li>
           </ul>
         </li>
         <li><a class="text-gray2">مجله خبری</a></li>
@@ -75,7 +102,7 @@
   <main>
 
     <!-- banner -->
-    <section id="banner" class="py-2 mt-4 overflow-hidden">
+    <section id="banner" class="pt-4 pt-lg-2 pb-2 mt-4 overflow-hidden">
       <div class="container-fluid position-relative">
         <img alt="shape" src="assets/img/blur-circle.svg" class="position-absolute end-0 top-0 w-322 z-1">
         <img alt="shape" src="assets/img/Misc_01.svg" class="position-absolute end-0 start-0 mx-auto top-50 z-10 ps-5">
@@ -89,7 +116,8 @@
                 <span class="text-main font-bold">واتا دیجیتال</span>، شرکت حرفه‌ایءء
                 در حــوزه دیجیتال مــارکتینگءء
               </h2>
-              <p class="ps-lg-5">این شرکت با تخصص و تجربه خود در این زمینه‌ها، خدماتی با کیفیت برای بهبود حضور آنلاین و رشد
+              <p class="ps-lg-5">این شرکت با تخصص و تجربه خود در این زمینه‌ها، خدماتی با کیفیت برای بهبود حضور آنلاین و
+                رشد
                 کسب و کارها ارائه می‌دهد.</p>
             </div>
             <div
@@ -103,9 +131,11 @@
           </div>
           <div class="col-lg-5 pe-0 ps-100 position-relative order-0 order-lg-1">
             <img alt="shape1" src="assets/img/orange-circle.svg" class="position-absolute end-0 top-0 z-1 mt-5">
-            <img alt="shape2" src="assets/img/info-circle3.svg" class="position-absolute start-0 top-0 z-1 ms-3 ms-lg-5 ps-lg-5">
-            <img alt="shape3" src="assets/img/primary-circle.svg" class="position-absolute start-0 bottom-0 z-1 ms-3 ms-lg-5 ps-lg-5 mb-5 pb-4">
-            <div
+            <img alt="shape2" src="assets/img/info-circle3.svg"
+              class="position-absolute start-0 top-0 z-1 ms-3 ms-lg-5 ps-lg-5">
+            <img alt="shape3" src="assets/img/primary-circle.svg"
+              class="position-absolute start-0 bottom-0 z-1 ms-3 ms-lg-5 ps-lg-5 mb-5 pb-4">
+            <div data-aos="fade-up-right"
               class="special-radius bg-white mx-auto w-100 p-2 h-auto d-flex align-items-center justify-content-center overflow-hidden border">
               <img alt="banner" src="assets/img/banner.png" class="img-fluid w-100">
             </div>
@@ -118,7 +148,7 @@
     <section id="statistics" class="py-4">
       <div class="container">
         <div class="row g-4">
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6" data-aos="flip-left">
             <div class="d-flex align-items-center gap-2 rounded-12 px-3 py-4 bg-second2">
               <div class="rounded-18 bg-second p-2">
                 <img alt="icon" src="assets/img/cup.svg">
@@ -129,7 +159,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6" data-aos="flip-left">
             <div class="d-flex align-items-center gap-2 rounded-12 px-3 py-4 bg-main2">
               <div class="rounded-18 bg-main p-2">
                 <img alt="icon" src="assets/img/lamp-charge.svg">
@@ -140,7 +170,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6" data-aos="flip-left">
             <div class="d-flex align-items-center gap-2 rounded-12 px-3 py-4 bg-purple2">
               <div class="rounded-18 bg-purple p-2">
                 <img alt="icon" src="assets/img/people.svg">
@@ -151,7 +181,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6" data-aos="flip-left">
             <div class="d-flex align-items-center gap-2 rounded-12 px-3 py-4 bg-third2">
               <div class="rounded-18 bg-third p-2">
                 <img alt="icon" src="assets/img/heart.svg">
@@ -167,10 +197,10 @@
     </section>
 
     <!-- about -->
-    <section id="about" class="py-5 my-5 overflow-hidden">
+    <section id="about" class="py-5 my-1 my-lg-3 overflow-hidden">
       <div class="container">
         <div class="row g-4 align-items-end pt-5">
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-up">
             <h4 class="fw-bold">واتا دیجیتال، شرکت حرفه‌ایءء<br>
               در حــوزه دیجیتال مــارکتینگءء</h4>
             <p class="fw-bold text-gray4 text-justify mt-4">
@@ -184,8 +214,9 @@
               کارها کمک می‌کند تا در دنیای دیجیتال رقابتی موفقیت‌آمیز باشند.
             </p>
           </div>
-          <div class="col-lg-6 position-relative">
-            <img alt="shape" src="assets/img/blur-circle.svg" class="position-absolute end-0 start-0 mx-auto top-105 w-333 h-333 rounded-circle z-1">
+          <div class="col-lg-6 position-relative" data-aos="fade-down">
+            <img alt="shape" src="assets/img/blur-circle.svg"
+              class="position-absolute end-0 start-0 mx-auto top-105 w-333 h-333 rounded-circle z-1">
             <video controls="" class="w-75 mx-auto d-block p-md-4 p-2 border rounded-12 bg-gray3 mt-5"
               poster="assets/img/image 17.png">
               <source src="assets/img/8200326bb6d68412de4ab048d6f96a7b1191015.mp4" type="video/mp4">
@@ -198,7 +229,9 @@
 
     <!-- services -->
     <section id="services" class="py-5 position-relative">
+      <img alt="shape" src="assets/img/blur-circle.svg" class="position-absolute end-0 top-0 w-322 z-1">
       <img alt="shape" src="assets/img/wave2.svg" class="position-absolute start-0 z-1 w-100">
+      <img alt="shape" src="assets/img/blur-circle4.svg" class="position-absolute start-0 bottom-0 z-1">
       <div class="container">
         <div class="text-center">
           <img alt="icon" src="assets/img/bubble.svg">
@@ -206,7 +239,7 @@
           <p class="fs-14 text-gray5">خدماتی واتا دیجیتال به بخش های مختلفی تقسیم می شود <br>
             که میتوانید با انتخاب هر بخش سفارشات خود را ثبت نمایید و از خدمات واتا دیجیتال بهره مند شوید</p>
         </div>
-        <div class="row g-4 mt-5">
+        <div class="row g-4 mt-5" data-aos="fade-up">
           <div class="col-lg-4">
             <div class="rounded-12 white-gradient-bg border p-5 text-gray3">
               <div class="rounded-18 bg-main p-2 w-72 h-72 mx-auto">
@@ -270,7 +303,7 @@
         </div>
         <!-- Swiper -->
         <div class="position-relative mt-5">
-          <div class="swiper projects py-5">
+          <div class="swiper projects py-5" data-aos="zoom-in-up">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img alt="projects" src="assets/img/project1.png" class="img-fluid w-100" />
@@ -311,19 +344,36 @@
           <div class="col-lg-6">
             <div class="row g-4">
               <div class="col-md-6">
-                <div class="rounded-12 overflow-hidden benefit-card transition white-gradient-bg border px-3 py-4 text-gray3 shadow mb-4 position-relative">
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                  class="rounded-12 overflow-hidden benefit-card transition white-gradient-bg border px-3 py-4 text-gray3 shadow mb-4 position-relative">
                   <img alt="shape" src="assets/img/blur-circle3.svg" class="position-absolute top-0 end-0 z-1">
                   <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
-                      <path d="M28.7512 50.8749H23.2912C21.7745 50.8749 20.4095 50.2248 19.4995 49.1198C18.6979 48.1231 18.3945 46.8448 18.6762 45.6315L19.5645 41.71C19.7379 40.9733 20.3879 40.4531 21.1462 40.4531H30.8962C31.6545 40.4531 32.3046 40.9733 32.4779 41.71L33.3662 45.6315C33.6479 46.9315 33.3879 48.1882 32.5862 49.1849C31.6979 50.2465 30.3112 50.8749 28.7512 50.8749ZM22.4462 43.66L21.8395 46.325C21.7745 46.65 21.9045 46.9099 22.0345 47.0616C22.3162 47.4082 22.7712 47.6032 23.2912 47.6032H28.7512C29.3145 47.6032 29.7912 47.4299 30.0512 47.1049C30.2245 46.8883 30.2679 46.6283 30.2029 46.3033L29.5962 43.6383H22.4462V43.66Z" fill="#f9a537"/>
-                      <path d="M30.8967 43.6601C30.4417 43.6601 30.0084 43.4867 29.6834 43.1184C29.0984 42.4467 29.1417 41.4283 29.8134 40.8216L33.5617 37.4848C35.0567 36.1632 34.9917 35.8384 33.8867 34.4517L27.2784 26.0666C26.91 25.6116 26.4767 25.3516 26.0217 25.3516C25.5667 25.3516 25.1334 25.6116 24.765 26.0666L18.1567 34.4517C16.9867 35.9467 17.0084 36.2717 18.4384 37.4417L22.23 40.8216C22.9017 41.4066 22.9667 42.4467 22.3601 43.1184C21.7534 43.7901 20.735 43.8549 20.0634 43.2483L16.315 39.9115C13.585 37.6798 13.3467 35.2966 15.6 32.4366L22.2084 24.0516C23.1834 22.8166 24.57 22.1016 26.0217 22.1016C27.4734 22.1016 28.8601 22.8166 29.8351 24.0516L36.4434 32.4366C38.6751 35.2533 38.4584 37.5065 35.7284 39.9115L31.98 43.2483C31.655 43.5299 31.265 43.6601 30.8967 43.6601Z" fill="#f9a537"/>
-                      <path d="M26.0212 31.7C25.1328 31.7 24.3962 30.9633 24.3962 30.075V24.5933C24.3962 23.7049 25.1328 22.9683 26.0212 22.9683C26.9095 22.9683 27.6462 23.7049 27.6462 24.5933V30.075C27.6462 30.985 26.9095 31.7 26.0212 31.7Z" fill="#f9a537"/>
-                      <path d="M27.1267 12.9583H24.96C22.88 12.9583 21.1684 11.2466 21.1684 9.16659V6.99992C21.1684 4.91992 22.88 3.20825 24.96 3.20825H27.1267C29.2067 3.20825 30.9184 4.91992 30.9184 6.99992V9.16659C30.9184 11.2466 29.2284 12.9583 27.1267 12.9583ZM24.96 6.45825C24.6567 6.45825 24.4184 6.69659 24.4184 6.99992V9.16659C24.4184 9.46992 24.6567 9.70825 24.96 9.70825H27.1267C27.43 9.70825 27.6684 9.46992 27.6684 9.16659V6.99992C27.6684 6.69659 27.43 6.45825 27.1267 6.45825H24.96Z" fill="#f9a537"/>
-                      <path d="M9.25171 32.8265H7.08504C5.00504 32.8265 3.29337 31.1149 3.29337 29.0349V26.8682C3.29337 24.7882 5.00504 23.0764 7.08504 23.0764H9.25171C11.3317 23.0764 13.0434 24.7882 13.0434 26.8682V29.0349C13.0434 31.1149 11.3317 32.8265 9.25171 32.8265ZM7.08504 26.3264C6.78171 26.3264 6.54337 26.5649 6.54337 26.8682V29.0349C6.54337 29.3382 6.78171 29.5765 7.08504 29.5765H9.25171C9.55504 29.5765 9.79337 29.3382 9.79337 29.0349V26.8682C9.79337 26.5649 9.55504 26.3264 9.25171 26.3264H7.08504Z" fill="#f9a537"/>
-                      <path d="M44.915 32.8265H42.7483C40.6683 32.8265 38.9566 31.1149 38.9566 29.0349V26.8682C38.9566 24.7882 40.6683 23.0764 42.7483 23.0764H44.915C46.995 23.0764 48.7066 24.7882 48.7066 26.8682V29.0349C48.7066 31.1149 47.0166 32.8265 44.915 32.8265ZM42.7483 26.3264C42.445 26.3264 42.2066 26.5649 42.2066 26.8682V29.0349C42.2066 29.3382 42.445 29.5765 42.7483 29.5765H44.915C45.2183 29.5765 45.4566 29.3382 45.4566 29.0349V26.8682C45.4566 26.5649 45.2183 26.3264 44.915 26.3264H42.7483Z" fill="#f9a537"/>
-                      <path d="M8.125 26.3269C7.23667 26.3269 6.5 25.5902 6.5 24.7019C6.5 15.4502 13.4333 7.67188 22.62 6.58855C23.5083 6.50188 24.31 7.13016 24.4183 8.01849C24.5267 8.90683 23.8767 9.70853 22.9883 9.81686C15.4483 10.7052 9.75 17.0969 9.75 24.7019C9.75 25.5902 9.01333 26.3269 8.125 26.3269Z" fill="#f9a537"/>
-                      <path d="M43.875 26.3267C42.9867 26.3267 42.25 25.5901 42.25 24.7017C42.25 17.1401 36.595 10.7484 29.0984 9.83844C28.21 9.73011 27.5817 8.9284 27.69 8.04007C27.7984 7.15173 28.6 6.50181 29.51 6.63181C38.6317 7.73681 45.5217 15.5151 45.5217 24.7234C45.5 25.5901 44.785 26.3267 43.875 26.3267Z" fill="#f9a537"/>
-                      </svg>
+                      <path
+                        d="M28.7512 50.8749H23.2912C21.7745 50.8749 20.4095 50.2248 19.4995 49.1198C18.6979 48.1231 18.3945 46.8448 18.6762 45.6315L19.5645 41.71C19.7379 40.9733 20.3879 40.4531 21.1462 40.4531H30.8962C31.6545 40.4531 32.3046 40.9733 32.4779 41.71L33.3662 45.6315C33.6479 46.9315 33.3879 48.1882 32.5862 49.1849C31.6979 50.2465 30.3112 50.8749 28.7512 50.8749ZM22.4462 43.66L21.8395 46.325C21.7745 46.65 21.9045 46.9099 22.0345 47.0616C22.3162 47.4082 22.7712 47.6032 23.2912 47.6032H28.7512C29.3145 47.6032 29.7912 47.4299 30.0512 47.1049C30.2245 46.8883 30.2679 46.6283 30.2029 46.3033L29.5962 43.6383H22.4462V43.66Z"
+                        fill="#f9a537" />
+                      <path
+                        d="M30.8967 43.6601C30.4417 43.6601 30.0084 43.4867 29.6834 43.1184C29.0984 42.4467 29.1417 41.4283 29.8134 40.8216L33.5617 37.4848C35.0567 36.1632 34.9917 35.8384 33.8867 34.4517L27.2784 26.0666C26.91 25.6116 26.4767 25.3516 26.0217 25.3516C25.5667 25.3516 25.1334 25.6116 24.765 26.0666L18.1567 34.4517C16.9867 35.9467 17.0084 36.2717 18.4384 37.4417L22.23 40.8216C22.9017 41.4066 22.9667 42.4467 22.3601 43.1184C21.7534 43.7901 20.735 43.8549 20.0634 43.2483L16.315 39.9115C13.585 37.6798 13.3467 35.2966 15.6 32.4366L22.2084 24.0516C23.1834 22.8166 24.57 22.1016 26.0217 22.1016C27.4734 22.1016 28.8601 22.8166 29.8351 24.0516L36.4434 32.4366C38.6751 35.2533 38.4584 37.5065 35.7284 39.9115L31.98 43.2483C31.655 43.5299 31.265 43.6601 30.8967 43.6601Z"
+                        fill="#f9a537" />
+                      <path
+                        d="M26.0212 31.7C25.1328 31.7 24.3962 30.9633 24.3962 30.075V24.5933C24.3962 23.7049 25.1328 22.9683 26.0212 22.9683C26.9095 22.9683 27.6462 23.7049 27.6462 24.5933V30.075C27.6462 30.985 26.9095 31.7 26.0212 31.7Z"
+                        fill="#f9a537" />
+                      <path
+                        d="M27.1267 12.9583H24.96C22.88 12.9583 21.1684 11.2466 21.1684 9.16659V6.99992C21.1684 4.91992 22.88 3.20825 24.96 3.20825H27.1267C29.2067 3.20825 30.9184 4.91992 30.9184 6.99992V9.16659C30.9184 11.2466 29.2284 12.9583 27.1267 12.9583ZM24.96 6.45825C24.6567 6.45825 24.4184 6.69659 24.4184 6.99992V9.16659C24.4184 9.46992 24.6567 9.70825 24.96 9.70825H27.1267C27.43 9.70825 27.6684 9.46992 27.6684 9.16659V6.99992C27.6684 6.69659 27.43 6.45825 27.1267 6.45825H24.96Z"
+                        fill="#f9a537" />
+                      <path
+                        d="M9.25171 32.8265H7.08504C5.00504 32.8265 3.29337 31.1149 3.29337 29.0349V26.8682C3.29337 24.7882 5.00504 23.0764 7.08504 23.0764H9.25171C11.3317 23.0764 13.0434 24.7882 13.0434 26.8682V29.0349C13.0434 31.1149 11.3317 32.8265 9.25171 32.8265ZM7.08504 26.3264C6.78171 26.3264 6.54337 26.5649 6.54337 26.8682V29.0349C6.54337 29.3382 6.78171 29.5765 7.08504 29.5765H9.25171C9.55504 29.5765 9.79337 29.3382 9.79337 29.0349V26.8682C9.79337 26.5649 9.55504 26.3264 9.25171 26.3264H7.08504Z"
+                        fill="#f9a537" />
+                      <path
+                        d="M44.915 32.8265H42.7483C40.6683 32.8265 38.9566 31.1149 38.9566 29.0349V26.8682C38.9566 24.7882 40.6683 23.0764 42.7483 23.0764H44.915C46.995 23.0764 48.7066 24.7882 48.7066 26.8682V29.0349C48.7066 31.1149 47.0166 32.8265 44.915 32.8265ZM42.7483 26.3264C42.445 26.3264 42.2066 26.5649 42.2066 26.8682V29.0349C42.2066 29.3382 42.445 29.5765 42.7483 29.5765H44.915C45.2183 29.5765 45.4566 29.3382 45.4566 29.0349V26.8682C45.4566 26.5649 45.2183 26.3264 44.915 26.3264H42.7483Z"
+                        fill="#f9a537" />
+                      <path
+                        d="M8.125 26.3269C7.23667 26.3269 6.5 25.5902 6.5 24.7019C6.5 15.4502 13.4333 7.67188 22.62 6.58855C23.5083 6.50188 24.31 7.13016 24.4183 8.01849C24.5267 8.90683 23.8767 9.70853 22.9883 9.81686C15.4483 10.7052 9.75 17.0969 9.75 24.7019C9.75 25.5902 9.01333 26.3269 8.125 26.3269Z"
+                        fill="#f9a537" />
+                      <path
+                        d="M43.875 26.3267C42.9867 26.3267 42.25 25.5901 42.25 24.7017C42.25 17.1401 36.595 10.7484 29.0984 9.83844C28.21 9.73011 27.5817 8.9284 27.69 8.04007C27.7984 7.15173 28.6 6.50181 29.51 6.63181C38.6317 7.73681 45.5217 15.5151 45.5217 24.7234C45.5 25.5901 44.785 26.3267 43.875 26.3267Z"
+                        fill="#f9a537" />
+                    </svg>
                   </div>
                   <h5 class="fw-bold mt-4 mb-3">طراحی کاربر پسند</h5>
                   <p class="fs-14">
@@ -331,14 +381,21 @@
                     رضایت آن‌ها را بهبود می‌بخشد.
                   </p>
                 </div>
-                <div class="rounded-12 overflow-hidden benefit-card transition white-gradient-bg border px-3 py-4 text-gray3 shadow position-relative">
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                  class="rounded-12 overflow-hidden benefit-card transition white-gradient-bg border px-3 py-4 text-gray3 shadow position-relative">
                   <img alt="shape" src="assets/img/blur-circle3.svg" class="position-absolute top-0 end-0 z-1">
                   <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
-                      <path d="M26 49.8134C23.6383 49.8134 21.2983 49.1201 19.4567 47.7551L10.14 40.8001C7.67 38.9585 5.74167 35.1235 5.74167 32.0468V15.9268C5.74167 12.5901 8.19 9.03678 11.3317 7.86678L22.1433 3.81512C24.2883 3.01345 27.6683 3.01345 29.8133 3.81512L40.6467 7.86678C43.7883 9.03678 46.2367 12.5901 46.2367 15.9268V32.0251C46.2367 35.1018 44.3083 38.9368 41.8383 40.7785L32.5217 47.7334C30.7017 49.1201 28.3617 49.8134 26 49.8134ZM23.2917 6.87012L12.48 10.9218C10.6167 11.6151 8.99167 13.9551 8.99167 15.9485V32.0468C8.99167 34.1051 10.4433 36.9868 12.0683 38.2001L21.385 45.1551C23.8767 47.0185 28.1017 47.0185 30.5933 45.1551L39.91 38.2001C41.5567 36.9651 42.9867 34.0835 42.9867 32.0468V15.9268C42.9867 13.9551 41.3617 11.6151 39.4983 10.9001L28.6867 6.84845C27.2567 6.32845 24.7433 6.32845 23.2917 6.87012Z" fill="#FF6633"/>
-                      <path d="M26 29.2084C22.7067 29.2084 20.0417 26.5434 20.0417 23.2501C20.0417 19.9567 22.7067 17.2917 26 17.2917C29.2933 17.2917 31.9583 19.9567 31.9583 23.2501C31.9583 26.5434 29.2933 29.2084 26 29.2084ZM26 20.5417C24.505 20.5417 23.2917 21.7551 23.2917 23.2501C23.2917 24.7451 24.505 25.9584 26 25.9584C27.495 25.9584 28.7083 24.7451 28.7083 23.2501C28.7083 21.7551 27.495 20.5417 26 20.5417Z" fill="#FF6633"/>
-                      <path d="M26 35.7083C25.1117 35.7083 24.375 34.9716 24.375 34.0833V27.5833C24.375 26.6949 25.1117 25.9583 26 25.9583C26.8883 25.9583 27.625 26.6949 27.625 27.5833V34.0833C27.625 34.9716 26.8883 35.7083 26 35.7083Z" fill="#FF6633"/>
-                      </svg>
+                      <path
+                        d="M26 49.8134C23.6383 49.8134 21.2983 49.1201 19.4567 47.7551L10.14 40.8001C7.67 38.9585 5.74167 35.1235 5.74167 32.0468V15.9268C5.74167 12.5901 8.19 9.03678 11.3317 7.86678L22.1433 3.81512C24.2883 3.01345 27.6683 3.01345 29.8133 3.81512L40.6467 7.86678C43.7883 9.03678 46.2367 12.5901 46.2367 15.9268V32.0251C46.2367 35.1018 44.3083 38.9368 41.8383 40.7785L32.5217 47.7334C30.7017 49.1201 28.3617 49.8134 26 49.8134ZM23.2917 6.87012L12.48 10.9218C10.6167 11.6151 8.99167 13.9551 8.99167 15.9485V32.0468C8.99167 34.1051 10.4433 36.9868 12.0683 38.2001L21.385 45.1551C23.8767 47.0185 28.1017 47.0185 30.5933 45.1551L39.91 38.2001C41.5567 36.9651 42.9867 34.0835 42.9867 32.0468V15.9268C42.9867 13.9551 41.3617 11.6151 39.4983 10.9001L28.6867 6.84845C27.2567 6.32845 24.7433 6.32845 23.2917 6.87012Z"
+                        fill="#FF6633" />
+                      <path
+                        d="M26 29.2084C22.7067 29.2084 20.0417 26.5434 20.0417 23.2501C20.0417 19.9567 22.7067 17.2917 26 17.2917C29.2933 17.2917 31.9583 19.9567 31.9583 23.2501C31.9583 26.5434 29.2933 29.2084 26 29.2084ZM26 20.5417C24.505 20.5417 23.2917 21.7551 23.2917 23.2501C23.2917 24.7451 24.505 25.9584 26 25.9584C27.495 25.9584 28.7083 24.7451 28.7083 23.2501C28.7083 21.7551 27.495 20.5417 26 20.5417Z"
+                        fill="#FF6633" />
+                      <path
+                        d="M26 35.7083C25.1117 35.7083 24.375 34.9716 24.375 34.0833V27.5833C24.375 26.6949 25.1117 25.9583 26 25.9583C26.8883 25.9583 27.625 26.6949 27.625 27.5833V34.0833C27.625 34.9716 26.8883 35.7083 26 35.7083Z"
+                        fill="#FF6633" />
+                    </svg>
                   </div>
                   <h5 class="fw-bold mt-4 mb-3">امنیت سایت</h5>
                   <p class="fs-14">
@@ -348,14 +405,21 @@
                 </div>
               </div>
               <div class="col-md-6 mt-md-5 pt-md-5">
-                <div class="rounded-12 overflow-hidden benefit-card transition white-gradient-bg border px-3 py-4 text-gray3 shadow mb-4 position-relative">
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                  class="rounded-12 overflow-hidden benefit-card transition white-gradient-bg border px-3 py-4 text-gray3 shadow mb-4 position-relative">
                   <img alt="shape" src="assets/img/blur-circle3.svg" class="position-absolute top-0 end-0 z-1">
                   <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
-                      <path d="M26 36.7916C25.1333 36.7916 24.2667 36.7266 23.4433 36.5749C18.85 35.9032 14.6683 33.2599 12.025 29.3382C10.1833 26.5649 9.20834 23.3366 9.20834 19.9999C9.20834 10.7483 16.7483 3.20825 26 3.20825C35.2517 3.20825 42.7917 10.7483 42.7917 19.9999C42.7917 23.3366 41.8167 26.5649 39.975 29.3382C37.31 33.2816 33.1283 35.9033 28.4917 36.5966C27.7333 36.7266 26.8667 36.7916 26 36.7916ZM26 6.45825C18.525 6.45825 12.4583 12.5249 12.4583 19.9999C12.4583 22.7083 13.2383 25.3083 14.7117 27.5183C16.8567 30.6816 20.215 32.8049 23.9417 33.3466C25.3283 33.5849 26.6933 33.5849 27.9717 33.3466C31.7633 32.8049 35.1217 30.6599 37.2667 27.4966C38.74 25.2866 39.52 22.6866 39.52 19.9782C39.5417 12.5249 33.475 6.45825 26 6.45825Z" fill="#00ADF8"/>
-                      <path d="M14.0179 49.445C13.7146 49.445 13.4329 49.4017 13.1296 49.3367C11.7213 49.0117 10.6379 47.9283 10.3129 46.52L9.55461 43.335C9.51128 43.14 9.35961 42.9883 9.14295 42.9233L5.56795 42.0784C4.22461 41.7534 3.16295 40.7567 2.79461 39.435C2.42628 38.1133 2.79462 36.6833 3.76962 35.7083L12.2196 27.2584C12.5663 26.9117 13.0429 26.7384 13.5196 26.7817C13.9963 26.825 14.4296 27.085 14.7113 27.4967C16.8563 30.66 20.2146 32.805 23.9629 33.3467C25.3496 33.585 26.7146 33.585 27.9929 33.3467C31.7846 32.805 35.1429 30.66 37.2879 27.4967C37.5479 27.085 38.0029 26.825 38.4796 26.7817C38.9563 26.7384 39.4329 26.9117 39.7796 27.2584L48.2296 35.7083C49.2046 36.6833 49.5729 38.1133 49.2046 39.435C48.8363 40.7567 47.7529 41.775 46.4313 42.0784L42.8563 42.9233C42.6613 42.9667 42.5096 43.1183 42.4446 43.335L41.6863 46.52C41.3613 47.9283 40.2779 49.0117 38.8696 49.3367C37.4613 49.6834 36.0096 49.185 35.0996 48.08L25.9996 37.615L16.8996 48.1017C16.1629 48.9683 15.1229 49.445 14.0179 49.445ZM13.1946 30.8983L6.06628 38.0267C5.87128 38.2217 5.89295 38.4384 5.93628 38.5684C5.95795 38.6767 6.06628 38.8933 6.32628 38.9367L9.90128 39.7817C11.3096 40.1067 12.3929 41.19 12.7179 42.5983L13.4763 45.7833C13.5413 46.065 13.7579 46.1517 13.8879 46.195C14.0179 46.2167 14.2346 46.2384 14.4296 46.0217L22.7279 36.4667C19.0446 35.7517 15.6646 33.78 13.1946 30.8983ZM29.2713 36.445L37.5696 45.9783C37.7646 46.2167 38.0029 46.2167 38.1329 46.1733C38.2629 46.1516 38.4579 46.0434 38.5446 45.7617L39.3029 42.5767C39.6279 41.1684 40.7113 40.085 42.1196 39.76L45.6946 38.915C45.9546 38.85 46.0629 38.655 46.0846 38.5467C46.1279 38.4383 46.1496 38.2 45.9546 38.005L38.8263 30.8767C36.3346 33.7583 32.9763 35.73 29.2713 36.445Z" fill="#00ADF8"/>
-                      <path d="M30.0953 28.4284C29.532 28.4284 28.8603 28.2767 28.0586 27.8001L26.0003 26.565L23.942 27.7784C22.057 28.905 20.822 28.255 20.367 27.93C19.912 27.605 18.937 26.6301 19.4353 24.4851L19.9553 22.2534L18.222 20.65C17.2686 19.6967 16.922 18.5484 17.247 17.5084C17.572 16.4684 18.5253 15.7317 19.8686 15.515L22.187 15.125L23.292 12.6984C23.9203 11.4634 24.8953 10.77 26.0003 10.77C27.1053 10.77 28.102 11.4851 28.7086 12.7201L29.987 15.2767L32.132 15.5367C33.4536 15.7534 34.407 16.49 34.7536 17.53C35.0786 18.57 34.732 19.7184 33.7786 20.6717L31.9803 22.4701L32.5436 24.4851C33.042 26.6301 32.067 27.605 31.612 27.93C31.3736 28.125 30.8536 28.4284 30.0953 28.4284ZM20.822 18.6784L22.317 20.1733C23.0103 20.8667 23.357 22.0367 23.1403 22.9901L22.7286 24.7234L24.462 23.705C25.3936 23.1634 26.6503 23.1634 27.5603 23.705L29.2936 24.7234L28.9036 22.9901C28.687 22.0151 29.012 20.8667 29.7053 20.1733L31.2003 18.6784L29.3153 18.3534C28.4053 18.2017 27.4953 17.5301 27.0836 16.7067L26.0003 14.5834L24.917 16.75C24.527 17.5517 23.617 18.2451 22.707 18.3967L20.822 18.6784Z" fill="#00ADF8"/>
-                      </svg>
+                      <path
+                        d="M26 36.7916C25.1333 36.7916 24.2667 36.7266 23.4433 36.5749C18.85 35.9032 14.6683 33.2599 12.025 29.3382C10.1833 26.5649 9.20834 23.3366 9.20834 19.9999C9.20834 10.7483 16.7483 3.20825 26 3.20825C35.2517 3.20825 42.7917 10.7483 42.7917 19.9999C42.7917 23.3366 41.8167 26.5649 39.975 29.3382C37.31 33.2816 33.1283 35.9033 28.4917 36.5966C27.7333 36.7266 26.8667 36.7916 26 36.7916ZM26 6.45825C18.525 6.45825 12.4583 12.5249 12.4583 19.9999C12.4583 22.7083 13.2383 25.3083 14.7117 27.5183C16.8567 30.6816 20.215 32.8049 23.9417 33.3466C25.3283 33.5849 26.6933 33.5849 27.9717 33.3466C31.7633 32.8049 35.1217 30.6599 37.2667 27.4966C38.74 25.2866 39.52 22.6866 39.52 19.9782C39.5417 12.5249 33.475 6.45825 26 6.45825Z"
+                        fill="#00ADF8" />
+                      <path
+                        d="M14.0179 49.445C13.7146 49.445 13.4329 49.4017 13.1296 49.3367C11.7213 49.0117 10.6379 47.9283 10.3129 46.52L9.55461 43.335C9.51128 43.14 9.35961 42.9883 9.14295 42.9233L5.56795 42.0784C4.22461 41.7534 3.16295 40.7567 2.79461 39.435C2.42628 38.1133 2.79462 36.6833 3.76962 35.7083L12.2196 27.2584C12.5663 26.9117 13.0429 26.7384 13.5196 26.7817C13.9963 26.825 14.4296 27.085 14.7113 27.4967C16.8563 30.66 20.2146 32.805 23.9629 33.3467C25.3496 33.585 26.7146 33.585 27.9929 33.3467C31.7846 32.805 35.1429 30.66 37.2879 27.4967C37.5479 27.085 38.0029 26.825 38.4796 26.7817C38.9563 26.7384 39.4329 26.9117 39.7796 27.2584L48.2296 35.7083C49.2046 36.6833 49.5729 38.1133 49.2046 39.435C48.8363 40.7567 47.7529 41.775 46.4313 42.0784L42.8563 42.9233C42.6613 42.9667 42.5096 43.1183 42.4446 43.335L41.6863 46.52C41.3613 47.9283 40.2779 49.0117 38.8696 49.3367C37.4613 49.6834 36.0096 49.185 35.0996 48.08L25.9996 37.615L16.8996 48.1017C16.1629 48.9683 15.1229 49.445 14.0179 49.445ZM13.1946 30.8983L6.06628 38.0267C5.87128 38.2217 5.89295 38.4384 5.93628 38.5684C5.95795 38.6767 6.06628 38.8933 6.32628 38.9367L9.90128 39.7817C11.3096 40.1067 12.3929 41.19 12.7179 42.5983L13.4763 45.7833C13.5413 46.065 13.7579 46.1517 13.8879 46.195C14.0179 46.2167 14.2346 46.2384 14.4296 46.0217L22.7279 36.4667C19.0446 35.7517 15.6646 33.78 13.1946 30.8983ZM29.2713 36.445L37.5696 45.9783C37.7646 46.2167 38.0029 46.2167 38.1329 46.1733C38.2629 46.1516 38.4579 46.0434 38.5446 45.7617L39.3029 42.5767C39.6279 41.1684 40.7113 40.085 42.1196 39.76L45.6946 38.915C45.9546 38.85 46.0629 38.655 46.0846 38.5467C46.1279 38.4383 46.1496 38.2 45.9546 38.005L38.8263 30.8767C36.3346 33.7583 32.9763 35.73 29.2713 36.445Z"
+                        fill="#00ADF8" />
+                      <path
+                        d="M30.0953 28.4284C29.532 28.4284 28.8603 28.2767 28.0586 27.8001L26.0003 26.565L23.942 27.7784C22.057 28.905 20.822 28.255 20.367 27.93C19.912 27.605 18.937 26.6301 19.4353 24.4851L19.9553 22.2534L18.222 20.65C17.2686 19.6967 16.922 18.5484 17.247 17.5084C17.572 16.4684 18.5253 15.7317 19.8686 15.515L22.187 15.125L23.292 12.6984C23.9203 11.4634 24.8953 10.77 26.0003 10.77C27.1053 10.77 28.102 11.4851 28.7086 12.7201L29.987 15.2767L32.132 15.5367C33.4536 15.7534 34.407 16.49 34.7536 17.53C35.0786 18.57 34.732 19.7184 33.7786 20.6717L31.9803 22.4701L32.5436 24.4851C33.042 26.6301 32.067 27.605 31.612 27.93C31.3736 28.125 30.8536 28.4284 30.0953 28.4284ZM20.822 18.6784L22.317 20.1733C23.0103 20.8667 23.357 22.0367 23.1403 22.9901L22.7286 24.7234L24.462 23.705C25.3936 23.1634 26.6503 23.1634 27.5603 23.705L29.2936 24.7234L28.9036 22.9901C28.687 22.0151 29.012 20.8667 29.7053 20.1733L31.2003 18.6784L29.3153 18.3534C28.4053 18.2017 27.4953 17.5301 27.0836 16.7067L26.0003 14.5834L24.917 16.75C24.527 17.5517 23.617 18.2451 22.707 18.3967L20.822 18.6784Z"
+                        fill="#00ADF8" />
+                    </svg>
                   </div>
                   <h5 class="fw-bold mt-4 mb-3">استانداردهای جهانی</h5>
                   <p class="fs-14">
@@ -363,14 +427,21 @@
                     به اندازه‌ی کافی تضمین می‌کند.
                   </p>
                 </div>
-                <div class="rounded-12 overflow-hidden benefit-card transition white-gradient-bg border px-3 py-4 text-gray3 shadow position-relative">
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                  class="rounded-12 overflow-hidden benefit-card transition white-gradient-bg border px-3 py-4 text-gray3 shadow position-relative">
                   <img alt="shape" src="assets/img/blur-circle3.svg" class="position-absolute top-0 end-0 z-1">
                   <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
-                      <path d="M26 49.2917C14.6467 49.2917 5.41666 40.0617 5.41666 28.7083C5.41666 17.355 14.6467 8.125 26 8.125C37.3533 8.125 46.5833 17.355 46.5833 28.7083C46.5833 40.0617 37.3533 49.2917 26 49.2917ZM26 11.375C16.445 11.375 8.66666 19.1533 8.66666 28.7083C8.66666 38.2633 16.445 46.0417 26 46.0417C35.555 46.0417 43.3333 38.2633 43.3333 28.7083C43.3333 19.1533 35.555 11.375 26 11.375Z" fill="#12B2B2"/>
-                      <path d="M26 29.7916C25.1117 29.7916 24.375 29.0549 24.375 28.1666V17.3333C24.375 16.4449 25.1117 15.7083 26 15.7083C26.8883 15.7083 27.625 16.4449 27.625 17.3333V28.1666C27.625 29.0549 26.8883 29.7916 26 29.7916Z" fill="#12B2B2"/>
-                      <path d="M32.5 5.95825H19.5C18.6117 5.95825 17.875 5.22159 17.875 4.33325C17.875 3.44492 18.6117 2.70825 19.5 2.70825H32.5C33.3883 2.70825 34.125 3.44492 34.125 4.33325C34.125 5.22159 33.3883 5.95825 32.5 5.95825Z" fill="#12B2B2"/>
-                      </svg>
+                      <path
+                        d="M26 49.2917C14.6467 49.2917 5.41666 40.0617 5.41666 28.7083C5.41666 17.355 14.6467 8.125 26 8.125C37.3533 8.125 46.5833 17.355 46.5833 28.7083C46.5833 40.0617 37.3533 49.2917 26 49.2917ZM26 11.375C16.445 11.375 8.66666 19.1533 8.66666 28.7083C8.66666 38.2633 16.445 46.0417 26 46.0417C35.555 46.0417 43.3333 38.2633 43.3333 28.7083C43.3333 19.1533 35.555 11.375 26 11.375Z"
+                        fill="#12B2B2" />
+                      <path
+                        d="M26 29.7916C25.1117 29.7916 24.375 29.0549 24.375 28.1666V17.3333C24.375 16.4449 25.1117 15.7083 26 15.7083C26.8883 15.7083 27.625 16.4449 27.625 17.3333V28.1666C27.625 29.0549 26.8883 29.7916 26 29.7916Z"
+                        fill="#12B2B2" />
+                      <path
+                        d="M32.5 5.95825H19.5C18.6117 5.95825 17.875 5.22159 17.875 4.33325C17.875 3.44492 18.6117 2.70825 19.5 2.70825H32.5C33.3883 2.70825 34.125 3.44492 34.125 4.33325C34.125 5.22159 33.3883 5.95825 32.5 5.95825Z"
+                        fill="#12B2B2" />
+                    </svg>
                   </div>
                   <h5 class="fw-bold mt-4 mb-3">سرعت سایت</h5>
                   <p class="fs-14">
@@ -398,7 +469,8 @@
         </div>
         <div class="row g-4 mt-5">
           <div class="col-lg-4">
-            <div class="rounded-12 bg-main2 border py-5 px-3 text-gray3">
+            <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+              class="rounded-12 bg-main2 border py-5 px-3 text-gray3">
               <div class="rounded-18 bg-main p-2 w-72 h-72 mx-auto">
                 <img alt="icon" src="assets/img/home.svg">
               </div>
@@ -423,7 +495,8 @@
             </div>
           </div>
           <div class="col-lg-4">
-            <div class="rounded-12 bg-main2 border py-5 px-3 text-gray3">
+            <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+              class="rounded-12 bg-main2 border py-5 px-3 text-gray3">
               <div class="rounded-18 bg-third p-2 w-72 h-72 mx-auto">
                 <img alt="icon" src="assets/img/crown.svg">
               </div>
@@ -447,7 +520,8 @@
             </div>
           </div>
           <div class="col-lg-4">
-            <div class="rounded-12 bg-main2 border py-5 px-3 text-gray3">
+            <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+              class="rounded-12 bg-main2 border py-5 px-3 text-gray3">
               <div class="rounded-18 bg-second p-2 w-72 h-72 mx-auto">
                 <img alt="icon" src="assets/img/flash.svg">
               </div>
@@ -489,47 +563,33 @@
         </div>
         <!-- Swiper -->
         <div class="position-relative mt-5">
-          <div class="swiper brands py-5">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img alt="projects" src="assets/img/brand1.png" class="img-fluid w-100" />
+          <div class="swiper brands py-5" data-aos="fade-up"
+          data-aos-anchor-placement="top-center">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide border w-175 h-80 d-flex align-items-center justify-content-center p-2 cursor">
+                <img alt="projects" src="assets/img/brand1.png" class="img-fluid w-100 transition" />
               </div>
-              <div class="swiper-slide">
-                <img alt="projects" src="assets/img/brand2.png" class="img-fluid w-100" />
+              <div class="swiper-slide border w-175 h-80 d-flex align-items-center justify-content-center p-2 cursor">
+                <img alt="projects" src="assets/img/brand2.png" class="img-fluid w-100 transition" />
               </div>
-              <div class="swiper-slide">
-                <img alt="projects" src="assets/img/brand3.png" class="img-fluid w-100" />
+              <div class="swiper-slide border w-175 h-80 d-flex align-items-center justify-content-center p-2 cursor">
+                <img alt="projects" src="assets/img/brand3.png" class="img-fluid w-100 transition" />
               </div>
-              <div class="swiper-slide">
-                <img alt="projects" src="assets/img/brand4.png" class="img-fluid w-100" />
+              <div class="swiper-slide border w-175 h-80 d-flex align-items-center justify-content-center p-2 cursor">
+                <img alt="projects" src="assets/img/brand4.png" class="img-fluid w-100 transition" />
               </div>
-              <div class="swiper-slide">
-                <img alt="projects" src="assets/img/brand5.png" class="img-fluid w-100" />
+              <div class="swiper-slide border w-175 h-80 d-flex align-items-center justify-content-center p-2 cursor">
+                <img alt="projects" src="assets/img/brand1.png" class="img-fluid w-100 transition" />
               </div>
-              <div class="swiper-slide">
-                <img alt="projects" src="assets/img/brand6.png" class="img-fluid w-100" />
+              <div class="swiper-slide border w-175 h-80 d-flex align-items-center justify-content-center p-2 cursor">
+                <img alt="projects" src="assets/img/brand5.png" class="img-fluid w-100 transition" />
               </div>
-              <div class="swiper-slide">
-                <img alt="projects" src="assets/img/brand1.png" class="img-fluid w-100" />
-              </div>
-              <div class="swiper-slide">
-                <img alt="projects" src="assets/img/brand2.png" class="img-fluid w-100" />
-              </div>
-              <div class="swiper-slide">
-                <img alt="projects" src="assets/img/brand3.png" class="img-fluid w-100" />
-              </div>
-              <div class="swiper-slide">
-                <img alt="projects" src="assets/img/brand4.png" class="img-fluid w-100" />
-              </div>
-              <div class="swiper-slide">
-                <img alt="projects" src="assets/img/brand5.png" class="img-fluid w-100" />
-              </div>
-              <div class="swiper-slide">
-                <img alt="projects" src="assets/img/brand6.png" class="img-fluid w-100" />
+              <div class="swiper-slide border w-175 h-80 d-flex align-items-center justify-content-center p-2 cursor">
+                <img alt="projects" src="assets/img/brand6.png" class="img-fluid w-100 transition" />
               </div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination2 text-center"></div>
         </div>
       </div>
     </section>
@@ -538,14 +598,16 @@
     <section class="py-5 bg-main2 position-relative overflow-hidden">
       <img alt="shape" src="assets/img/wave4.svg" class="position-absolute start-0 top-0">
       <div class="container">
-        <div class="d-flex flex-column flex-lg-row align-items-center white-gradient-bg2 rounded-12 shadow p-lg-5 p-3 mx-lg-5">
+        <div data-aos="zoom-out-right"
+          class="d-flex flex-column flex-lg-row align-items-center white-gradient-bg2 rounded-12 shadow p-lg-5 p-3 mx-lg-5">
           <div>
             <img alt="icon" src="assets/img/signpost.svg">
             <h4 class="text-gray3 fw-bold my-3">نیاز به مشاوره داریءء؟</h4>
             <p class="fs-14 text-gray3">فقط کافی اطلاعات تماس خود را وارد کنید تا کارشناسان ما در اولین فرصت با شما تماس
               بگیرند.</p>
           </div>
-          <a class="fs-14 bg-main rounded-pill py-2 px-5 text-white d-table me-auto main-outline-hover border-main position-relative z-10">درخواست
+          <a
+            class="fs-14 bg-main rounded-pill py-2 px-5 text-white d-table me-auto main-outline-hover border-main position-relative z-10">درخواست
             مشاوره</a>
         </div>
       </div>
@@ -565,7 +627,7 @@
         </div>
         <!-- Swiper -->
         <div class="position-relative mt-4">
-          <div class="swiper testimonials py-5 px-2">
+          <div class="swiper testimonials py-5 px-2" data-aos="zoom-in-up">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="rounded-12 border shadow px-3 py-4">
@@ -652,7 +714,7 @@
     </section>
 
     <!-- blog -->
-    <section id="blog" class="py-5 position-relative overflow-hidden">
+    <section id="blog" class="py-lg-5 py-1 position-relative overflow-hidden">
       <img alt="shape" src="assets/img/blur-circle.svg" class="position-absolute end-0 z-1">
       <div class="container">
         <div class="row g-4 align-items-center">
@@ -665,13 +727,16 @@
                 سایت، این است که با ترکیب این عوامل، سایت‌هایی با عملکرد بهتر، تجربه کاربری مثبت، سئو بهتر و حفاظت
                 قوی‌تر در برابر تهدیدات امنیتی را برای مشتریان خود فراهم می‌کند.
               </p>
-              <a class="fs-14 bg-main rounded-pill py-2 px-3 text-white d-table mt-5 me-auto main-outline-hover border-main">مشاهده مقالات</a>
+              <a
+                class="fs-14 bg-main rounded-pill py-2 px-3 text-white d-table mt-5 me-auto main-outline-hover border-main">مشاهده
+                مقالات</a>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 position-relative">
+            <img alt="shape" src="assets/img/blur-circle.svg" class="position-absolute end-0 start-0 mx-auto pe-5 z-1">
             <div class="row g-4">
               <div class="col-md-6">
-                <div class="rounded-12 overflow-hidden white-gradient-bg border text-gray3 shadow mb-4">
+                <div data-aos="flip-right" class="rounded-12 overflow-hidden white-gradient-bg border text-gray3 shadow mb-4">
                   <div>
                     <img alt="icon" src="assets/img/blog1.png" class="w-100 h-130">
                   </div>
@@ -682,7 +747,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="rounded-12 overflow-hidden white-gradient-bg border text-gray3 shadow mb-4">
+                <div data-aos="flip-right" class="rounded-12 overflow-hidden white-gradient-bg border text-gray3 shadow mb-4">
                   <div>
                     <img alt="icon" src="assets/img/blog2.png" class="w-100 h-193">
                   </div>
@@ -695,7 +760,7 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="rounded-12 overflow-hidden white-gradient-bg border text-gray3 shadow mb-4">
+                <div data-aos="flip-right" class="rounded-12 overflow-hidden white-gradient-bg border text-gray3 shadow mb-4">
                   <div>
                     <img alt="icon" src="assets/img/blog3.png" class="w-100 h-193">
                   </div>
@@ -706,7 +771,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="rounded-12 overflow-hidden white-gradient-bg border text-gray3 shadow mb-4">
+                <div data-aos="flip-right" class="rounded-12 overflow-hidden white-gradient-bg border text-gray3 shadow mb-4">
                   <div>
                     <img alt="icon" src="assets/img/blog4.png" class="w-100 h-130">
                   </div>
@@ -724,22 +789,24 @@
       </div>
     </section>
 
-     <!-- faq -->
-     <section id="faq" class="py-5">
+    <!-- faq -->
+    <section id="faq" class="py-5">
       <div class="container">
         <div class="text-center">
           <img alt="icon" src="assets/img/info-circle.svg">
           <h4 class="font-bold my-3">سوالات متداول واتا دیجیتال</h4>
         </div>
-        <div class="accordion font-bold fs-14 mt-5" id="accordionExample">
+        <div class="accordion font-bold fs-14 mt-5" id="accordionExample" data-aos="fade-down">
           <div class="accordion-item border-bottom border-0 overflow-hidden">
             <h2 class="accordion-header">
-              <button class="accordion-button d-flex align-items-center gap-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <button class="accordion-button d-flex align-items-center gap-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 <img alt="accordion" src="assets/img/info-circle2.svg">
                 <p class="mb-0 text-gray text-end">واتا دیجیتال چیست؟</p>
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse border-end border-start collapse show" data-bs-parent="#accordionExample">
+            <div id="collapseOne" class="accordion-collapse border-end border-start collapse show"
+              data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
                 متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
@@ -748,12 +815,15 @@
           </div>
           <div class="accordion-item border-bottom border-0 overflow-hidden">
             <h2 class="accordion-header">
-              <button class="accordion-button d-flex align-items-center gap-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button class="accordion-button d-flex align-items-center gap-2 collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo">
                 <img alt="accordion" src="assets/img/info-circle2.svg">
                 <p class="mb-0 text-gray text-end">واتا دیجیتال چه مزیتی نسب به رقبا دارد؟</p>
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse border-end border-start collapse" data-bs-parent="#accordionExample">
+            <div id="collapseTwo" class="accordion-collapse border-end border-start collapse"
+              data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
                 متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
@@ -762,12 +832,15 @@
           </div>
           <div class="accordion-item border-bottom border-0 overflow-hidden">
             <h2 class="accordion-header">
-              <button class="accordion-button d-flex align-items-center gap-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <button class="accordion-button d-flex align-items-center gap-2 collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                aria-controls="collapseThree">
                 <img alt="accordion" src="assets/img/info-circle2.svg">
                 <p class="mb-0 text-gray text-end">چرا به واتا دیجیتال نیاز داریم؟</p>
               </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse border-end border-start collapse" data-bs-parent="#accordionExample">
+            <div id="collapseThree" class="accordion-collapse border-end border-start collapse"
+              data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
                 متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
@@ -776,12 +849,15 @@
           </div>
           <div class="accordion-item border-bottom border-0 overflow-hidden">
             <h2 class="accordion-header">
-              <button class="accordion-button d-flex align-items-center gap-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <button class="accordion-button d-flex align-items-center gap-2 collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                aria-controls="collapseFour">
                 <img alt="accordion" src="assets/img/info-circle2.svg">
                 <p class="mb-0 text-gray text-end">واتا دیجیتال چه خدماتی ارائه می دهد؟</p>
               </button>
             </h2>
-            <div id="collapseFour" class="accordion-collapse border-end border-start collapse" data-bs-parent="#accordionExample">
+            <div id="collapseFour" class="accordion-collapse border-end border-start collapse"
+              data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
                 متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
@@ -790,12 +866,15 @@
           </div>
           <div class="accordion-item border-bottom border-0 overflow-hidden">
             <h2 class="accordion-header">
-              <button class="accordion-button d-flex align-items-center gap-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              <button class="accordion-button d-flex align-items-center gap-2 collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                aria-controls="collapseFive">
                 <img alt="accordion" src="assets/img/info-circle2.svg">
                 <p class="mb-0 text-gray text-end">با پشتیبانان واتا دیجیتال چگونه ارتباط بگیریم؟</p>
               </button>
             </h2>
-            <div id="collapseFive" class="accordion-collapse border-end border-start collapse" data-bs-parent="#accordionExample">
+            <div id="collapseFive" class="accordion-collapse border-end border-start collapse"
+              data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
                 متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
@@ -811,19 +890,25 @@
   <!-- footer -->
   <footer class="position-relative mt-5 pt-5">
     <!-- to top -->
-    <a href="#" class="arrow-link border-dark position-absolute end-0 start-0 border rounded-18 text-dark mx-auto py-3 d-flex align-items-center justify-content-center w-37">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z">
+    <a href="#"
+      class="arrow-link border-dark position-absolute end-0 start-0 border rounded-18 text-dark mx-auto py-3 d-flex align-items-center justify-content-center w-37">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+        class="bi bi-arrow-down transition" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z">
         </path>
       </svg>
     </a>
     <!--  -->
     <div class="container text-gray6">
       <a><img alt="logo" src="assets/img/logo.png"></a>
-      <div class="row g-4 mt-1 fs-12 border-bottom border-white pb-4">
+      <div class="row g-4 mt-1 fs-14 border-bottom border-white pb-4">
         <div class="col-lg-4">
           <p class="text-justify ps-lg-5">
-            واتا دیجیتال یک آژانس دیجیتال مارکتینگ حرفه‌ای و متخصص است که با تمرکز بر استراتژی‌های موثر و راهکارهای خلاقانه، به کسب و کارها در دستیابی به اهداف آنلاینشان کمک می‌کند. تیم واتا دیجیتال با تجربه و تخصص خود در حوزه‌های مختلف از تحلیل بازار تا تبلیغات دیجیتال، بهبود رتبه سایت و افزایش نرخ تبدیل، به رشد و موفقیت کسب و کارهای مشتریان خود می‌اندیشد.
+            واتا دیجیتال یک آژانس دیجیتال مارکتینگ حرفه‌ای و متخصص است که با تمرکز بر استراتژی‌های موثر و راهکارهای
+            خلاقانه، به کسب و کارها در دستیابی به اهداف آنلاینشان کمک می‌کند. تیم واتا دیجیتال با تجربه و تخصص خود در
+            حوزه‌های مختلف از تحلیل بازار تا تبلیغات دیجیتال، بهبود رتبه سایت و افزایش نرخ تبدیل، به رشد و موفقیت کسب و
+            کارهای مشتریان خود می‌اندیشد.
           </p>
         </div>
         <div class="col-lg-2 col-6">
@@ -865,8 +950,8 @@
         </div>
       </div>
       <div class="row g-4 py-4">
-         <p class="mb-0 col-md-9 text-center text-md-end">کلیه حقوق این وبسایت متعلق به واتا دیجیتال می باشد.</p>
-         <div class="col-md-3">
+        <p class="mb-0 col-md-9 text-center text-md-end">کلیه حقوق این وبسایت متعلق به واتا دیجیتال می باشد.</p>
+        <div class="col-md-3">
           <div class="d-flex align-items-center justify-content-lg-end justify-content-center gap-3">
             <a class="d-block">
               <img alt="social" src="assets/img/instagram.svg">
@@ -883,8 +968,8 @@
             <a class="d-block">
               <img alt="social" src="assets/img/twitter 1.svg">
             </a>
-           </div>
-         </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- wave -->
@@ -892,6 +977,7 @@
     <img alt="wave" src="assets/img/bg-footer1.png" class="position-absolute w-100 bottom-0 z-1">
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="assets/js/scrollreveal.min.js"></script>

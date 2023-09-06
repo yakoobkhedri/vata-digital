@@ -3,11 +3,15 @@ let hamIcon=document.getElementById('hamIcon');
 
 hamIcon.addEventListener('click',function () {
   hamIcon.parentElement.parentElement.querySelector('ul').classList.add('active');
+  document.getElementById('closeMenu').addEventListener('click',function () {
+    hamIcon.parentElement.parentElement.querySelector('ul').classList.remove('active');
+  })
 })
+// aos init
+AOS.init();
 // swiper
 var projects = new Swiper(".projects", {
   effect: "coverflow",
-  loop:true,
   autoplay: true,
   grabCursor: true,
   centeredSlides: true,
@@ -49,7 +53,7 @@ var brands = new Swiper(".brands", {
     },
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination2",
   },
 });
 var testimonials = new Swiper(".testimonials", {
