@@ -544,6 +544,9 @@ footer .arrow-link {
 footer .arrow-link:hover svg {
    color: #12B2B2;
 }
+footer a{
+    color: #1F2937;
+}
 
 /* responsive */
 @media only screen and (max-width:1400px) {}
