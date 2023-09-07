@@ -536,7 +536,6 @@ header li a:hover,footer ul li a:hover {
 .brands .swiper-slide:hover img {
     filter: grayscale(0%);
 }
-
 /* footer */
 footer .arrow-link {
     transform: rotate(180deg);
@@ -553,6 +552,10 @@ footer .arrow-link:hover svg {
 
     .h-48 {
         height: 52px;
+    }
+    .w-714{
+        left: 69px;
+        width: 571px;
     }
 }
 
@@ -596,6 +599,9 @@ footer .arrow-link:hover svg {
 
     .w-422,.w-460 {
         width: 300px;
+    }
+    .w-714{
+        width: 100%;
     }
 }
 
