@@ -341,9 +341,12 @@ a {
     margin-right: auto;
     margin-left: 0;
 }
-
+.accordion-button {
+  padding-left: 0;
+  padding-right: 0;
+}
 .accordion-button:not(.collapsed) {
-    background-color: #F3F4F6;
+    background-color: white;
 }
 
 .accordion-button:not(.collapsed)::after {
