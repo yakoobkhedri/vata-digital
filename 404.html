@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/css/styles.css'>
+    <title>404</title>
+</head>
+
+<body class="overflow-x-hidden">
+
+
+    <!-- search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input type="search" placeholder="جستجو" class="form-control">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- header -->
+    <header class="mt-2 z-100">
+        <nav
+            class="container white-gradient-bg2 d-flex align-items-center justify-content-between p-3 border rounded-pill">
+            <!-- logo && search icon && hamIcon -->
+            <svg id="hamIcon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
+                class="bi bi-list-nested flex-shrink-0 text-main d-lg-none cursor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            <div class="d-flex align-items-center gap-5">
+                <a class="flex-shrink-0"><img src="assets/img/logo.png" class="img-fluid"></a>
+                <div data-bs-toggle="modal" data-bs-target="#searchModal"
+                    class="d-lg-flex d-none align-items-center justify-content-center w-48 h-48 rounded-circle bg-gray2 cursor">
+                    <img alt="search-icon" src="assets/img/search-icon.svg">
+                </div>
+            </div>
+            <!-- menu -->
+            <ul class="list-unstyled m-0 p-lg-0 p-4 d-flex flex-column flex-lg-row align-items-center gap-4">
+                <svg id="closeMenu" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                    class="bi bi-x-circle-fill d-lg-none text-danger me-auto cursor" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                </svg>
+                <form class="d-lg-none">
+                    <input type="search" placeholder="جستجو" class="form-control">
+                </form>
+                <li><a href="index.html" class="text-gray2">صفحه اصلی</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle p-0 text-gray2" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        خدمات
+                    </a>
+                    <ul class="dropdown-menu text-end">
+                        <li><a class="dropdown-item" href="webdesign.html">طراحی سایت</a></li>
+                        <li><a class="dropdown-item" href="seo.html">سئو سایت</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html" class="text-gray2">مجله خبری</a></li>
+                <li><a href="about.html" class="text-gray2 active">درباره ما</a></li>
+                <li><a href="contact.html" class="text-gray2">تماس با ما</a></li>
+                <li>
+                    <a href="tel:+989131920545" class="d-lg-none d-flex align-items-center gap-1 cursor text-gray3">
+                      <img alt="call-icon" src="assets/img/call-calling.svg">
+                      <p class="mb-0">0545 192 0913</p>
+                    </a>
+                  </li>
+            </ul>
+            <!-- contact && login -->
+            <div class="d-flex align-items-center gap-3">
+                <a href="tel:+989131920545" class="d-lg-flex d-none align-items-center gap-1 cursor text-gray3">
+                    <img alt="call-icon" src="assets/img/call-calling.svg">
+                    <p class="mb-0">0545 192 0913</p>
+                  </a>
+                <a href="login.html"
+                    class="d-flex align-items-center gap-2 main-outline-hover bg-main border-main px-3 py-2 h-48 rounded-pill text-white fw-bold fs-14">
+                    <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                    <p class="mb-0 d-none d-xl-block">ثبت نام / ورود</p>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main class="flex align-items-center justify-content-center mt-5 py-5 position-relative">
+        <img alt="shape" src="assets/img/blur-circle.svg" class="position-absolute z-1 top-0">
+
+        <section class="container mt-lg-3">
+             <div class="row mx-0 g-5 align-items-end">
+               <div class="col-lg-6 text-center text-lg-end">
+                <h3 class="fw-bold">صفحه یافت نشد!</h3>
+                <h5>این صفحه وجود ندارد یا<br>
+                    به نظر آدرس را اشتباه وارد کرده اید.</h5>
+                    <a href="index.html" class="d-flex align-items-center justify-content-center main-outline-hover border-main gap-2 bg-main rounded-12 py-2 cursor text-white mt-5 w-256 ms-auto me-auto ms-lg-0 me-lg-0">
+                        <p class="mb-0">بازگشت به صفحه اصلی</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                          </svg>
+                    </a>
+               </div>
+               <div class="col-lg-6">
+                <img alt="404" src="assets/img/large 02.png" class="img-fluid d-block mx-auto w-100">
+               </div>
+             </div>
+        </section>
+
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
