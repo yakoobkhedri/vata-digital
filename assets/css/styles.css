@@ -576,14 +576,18 @@ footer a{
 @media only screen and (max-width:992px) {
     header ul {
         position: fixed;
-        right: -444px;
+        right: -2244px;
         top: 0;
         bottom: 0;
-        background: #d5f5f6;
-        width: 280px;
+        background: #a2b5ad;
+        width: 100%;
         transition: all .4s;
     }
-
+    header ul li {
+       width: 100%;
+       border-bottom: 1px solid white;
+       padding: 14px 3px;
+    }
     header ul.active {
         right: 0;
     }
