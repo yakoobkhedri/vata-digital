@@ -32,72 +32,105 @@
     </div>
 
 
-    <!-- header -->
-    <header class="mt-2 z-100">
-        <nav
-            class="container white-gradient-bg2 d-flex align-items-center justify-content-between p-3 border rounded-pill">
-            <!-- logo && search icon && hamIcon -->
-            <svg id="hamIcon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
-                class="bi bi-list-nested flex-shrink-0 text-main d-lg-none cursor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
-            </svg>
-            <div class="d-flex align-items-center gap-5">
-                <a class="flex-shrink-0"><img src="assets/img/logo.png" class="img-fluid"></a>
-                <div data-bs-toggle="modal" data-bs-target="#searchModal"
-                    class="d-lg-flex d-none align-items-center justify-content-center w-48 h-48 rounded-circle bg-gray2 cursor">
-                    <img alt="search-icon" src="assets/img/search-icon.svg">
-                </div>
-            </div>
-            <!-- menu -->
-            <ul class="list-unstyled m-0 p-lg-0 p-4 d-flex flex-column flex-lg-row align-items-center gap-4">
-                <svg id="closeMenu" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                    class="bi bi-x-circle-fill d-lg-none text-danger me-auto cursor" viewBox="0 0 16 16">
-                    <path
-                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
-                </svg>
-                <form class="d-lg-none">
-                    <input type="search" placeholder="جستجو" class="form-control">
-                </form>
-                <li><a href="index.html" class="text-gray2">صفحه اصلی</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle p-0 text-gray2" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        خدمات
-                    </a>
-                    <ul class="dropdown-menu text-end">
-                        <li><a class="dropdown-item" href="webdesign.html">طراحی سایت</a></li>
-                        <li><a class="dropdown-item" href="seo.html">سئو سایت</a></li>
-                    </ul>
-                </li>
-                <li><a href="blog.html" class="text-gray2">مجله خبری</a></li>
-                <li><a href="about.html" class="text-gray2 active">درباره ما</a></li>
-                <li><a href="contact.html" class="text-gray2">تماس با ما</a></li>
-                <li>
-                    <a href="tel:+989131920545" class="d-lg-none d-flex align-items-center gap-1 cursor text-gray3">
-                      <img alt="call-icon" src="assets/img/call-calling.svg">
-                      <p class="mb-0">0545 192 0913</p>
-                    </a>
-                  </li>
-            </ul>
-            <!-- contact && login -->
+     <!-- header -->
+  <header class="mt-2 z-100">
+    <nav class="container white-gradient-bg2 d-flex align-items-center justify-content-between p-3 border rounded-pill">
+      <!-- logo && search icon && hamIcon -->
+      <svg id="hamIcon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
+        class="bi bi-list-nested flex-shrink-0 text-main d-lg-none cursor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
+      </svg>
+      <div class="d-flex align-items-center gap-5">
+        <a class="flex-shrink-0"><img src="assets/img/logo.png" class="img-fluid"></a>
+        <div data-bs-toggle="modal" data-bs-target="#searchModal"
+          class="d-lg-flex d-none align-items-center justify-content-center w-48 h-48 rounded-circle bg-gray2 cursor">
+          <img alt="search-icon" src="assets/img/search-icon.svg">
+        </div>
+      </div>
+      <!-- menu -->
+      <ul class="list-unstyled m-0 p-lg-0 p-4 d-flex flex-column flex-lg-row align-items-center gap-lg-4">
+        <li class="d-lg-none border-bottom-0">
+          <div class="d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center gap-3">
-                <a href="tel:+989131920545" class="d-lg-flex d-none align-items-center gap-1 cursor text-gray3">
-                    <img alt="call-icon" src="assets/img/call-calling.svg">
-                    <p class="mb-0">0545 192 0913</p>
-                  </a>
-                <a href="login.html"
-                    class="d-flex align-items-center gap-2 main-outline-hover bg-main border-main px-3 py-2 h-48 rounded-pill text-white fw-bold fs-14">
-                    <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                    </svg>
-                    <p class="mb-0 d-none d-xl-block">ثبت نام / ورود</p>
-                </a>
+              <img alt="avatar" src="assets/img/63.png" class="rounded-circle w-48 h-48">
+              <div>
+                <p class="font-bold mb-0">محمد کریمی</p>
+                <p class="fs-14 mb-0">M-Karimi@gmail.com</p>
+              </div>
             </div>
-        </nav>
-    </header>
+            <svg id="closeMenu" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
+              class="bi bi-x cursor" viewBox="0 0 16 16">
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </div>
+        </li>
+        <li class="d-lg-none border-bottom-0">
+          <a href="tel:+989131920545" class="d-flex align-items-center gap-1 cursor text-gray3">
+            <img alt="call-icon" src="assets/img/call-calling.svg">
+            <p class="mb-0">0545 192 0913</p>
+          </a>
+        </li>
+        <li class="d-lg-none border-bottom-0">
+          <form>
+            <input type="search" placeholder="جستجو کنید..." class="form-control">
+          </form>
+        </li>
+        <li class="mt-5 mt-lg-0"><a href="index.html" class="text-gray3">صفحه اصلی</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle p-0 text-gray3" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            خدمات
+          </a>
+          <ul class="dropdown-menu text-end">
+            <li><a class="dropdown-item" href="webdesign.html">طراحی سایت</a></li>
+            <li><a class="dropdown-item" href="seo.html">سئو سایت</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html" class="text-gray3">مجله خبری</a></li>
+        <li><a href="about.html" class="text-gray3 active">درباره ما</a></li>
+        <li><a href="contact.html" class="text-gray3">تماس با ما</a></li>
+        <li class="d-lg-none"><a href="contact.html" class="text-danger">خروج از حساب کاربری</a></li>
+        <!-- socials -->
+        <li class="border-bottom-0 mt-5">
+          <div class="d-flex d-lg-none align-items-center justify-content-between gap-3">
+            <a class="d-block">
+              <img alt="social" src="assets/img/instagram.svg">
+            </a>
+            <a class="d-block">
+              <img alt="social" src="assets/img/send-2.svg">
+            </a>
+            <a class="d-block">
+              <img alt="social" src="assets/img/whatsapp.svg">
+            </a>
+            <a class="d-block">
+              <img alt="social" src="assets/img/facebook.svg">
+            </a>
+            <a class="d-block">
+              <img alt="social" src="assets/img/twitter 1.svg">
+            </a>
+          </div>
+        </li>
+      </ul>
+      <!-- contact && login -->
+      <div class="d-flex align-items-center gap-3">
+        <a href="tel:+989131920545" class="d-lg-flex d-none align-items-center gap-1 cursor text-gray3">
+          <img alt="call-icon" src="assets/img/call-calling.svg">
+          <p class="mb-0">0545 192 0913</p>
+        </a>
+        <a href="login.html"
+          class="d-flex align-items-center gap-2 main-outline-hover bg-main border-main px-3 py-2 h-48 rounded-pill text-white fw-bold fs-14">
+          <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+          </svg>
+          <p class="mb-0 d-none d-xl-block">ثبت نام / ورود</p>
+        </a>
+      </div>
+    </nav>
+  </header>
 
     <!-- main -->
     <main>
